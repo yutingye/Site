@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Rubik's Cube</title>
+</head>
+
+<body>
+
+<p><b><font size="6">Rubik's Cube</font></b></p>
+
+<p><img border="0" src="rubik's%20cube.JPG" width="390" height="369"></p>
+<p><b>Commands:</b></p>
+-d dimension : specify the dimension of the cube, it's n*n*n<br>
+-t turn_time : how much time to take a turn<br>
+-s scramble_times: how many turns to scramble the cube<br>
+-f : to solve the cube in animation<br>
+-r: reset the cube to a solved state<br>
+-t: toggle texture (not so well, i dunno why i can only load half of the 
+texture maps)<br>
+-p: pause or resume the animation <br>
+<p><b>Implementation:</b></p>
+<p>I didn't treat it as a combination of small cubes but of small squares. 
+Basically I have 6 facets, each of which is consisted of an n*n array. Each 
+element in these arrays stores the color and texture information, as well as the 
+rotate angle of the small square it represents.</p>
+<p>I wanted to use display list, but I dunno why it could not display texture. I 
+have to replace the glCallList() with actual rendering code. I used glPushMatrix 
+and glPopMatrix extensively to preserve the matrix of each little square.</p>
+<p>The textures are a bit off. First it takes a long time to load all the 
+textures (since they look identical, i dun see why we have to use all the 54 
+textures, anyway...). And I simply repeat mapping the same set of textures to 
+larger cubes which makes the logo appears several times( i guess it's the 
+white5.raw?). *I maybe mess up the orientations of the facets so 3 of them do not 
+display the textures. What I don't know is why the colors of the squares and the 
+colors of their textures are not the same. </p>
+<p>The 3d manipulation is odd. I referenced
+<a href="http://www.psychology.nottingham.ac.uk/staff/cr1/3d.html">3D Controls
+</a>and chose <b>Vector and Roll </b>because it's natural with opengl. But the 
+biggest problem is I don't how to combine each rotation. What I do is turn off 
+glLoadIdentity() so the rotations can be accumulated. But it doesn't work when 
+refreshing the screen, say animation or resizing... I also tried to use <b>
+Elevation and Azimuth</b> to represent rotations, but I don't have time to make 
+it work well. BTW, powerful as Quaternion is, it's too complicated for me to 
+figure out :'(&nbsp;<br>
+&nbsp;</p>
+<p>*Well, I know why it's do weird now. I made a silly mistake in indexing the 
+textures to each facet :(</p>
+
+</body>
+
+</html>

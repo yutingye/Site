@@ -1,0 +1,120 @@
+/*
+Template name: Bright Pixel
+Template URI: http://templates.arcsin.se/bright-pixel-website-template/
+Release date: 2006-05-07
+Description: A smooth, monochrome, lightweight design.
+Author: Viktor Persson
+Author URI: http://arcsin.se/
+
+This template is licensed under a Creative Commons Attribution 2.5 License:
+http://templates.arcsin.se/license/
+*/
+
+/* standard elements */
+a {
+	color: #333;
+	text-decoration: none;
+}
+body {
+	background: #CCC url(img/bg.gif) repeat-y fixed bottom center;
+	color: #333;
+	text-align: center;
+	margin: 20px, 0;
+	font: normal 0.6em serif,Times New Roman;
+}
+.gfx a {
+	background: #F5F5F5 url(img/bright_pixel.gif) no-repeat left center; 
+	display: block; 
+	height: 259px;
+}
+
+/* header */
+.header {
+	background: #FFF;
+	border-bottom: 1px solid #E5E5E5;
+	font: bold 2.6em serif,Times New Roman;
+	line-height: 3em;
+}
+
+/* main */
+.main {
+	background: #FFF; 
+	border: 3px double #EEE; 
+	border-color: #E4E4E4 #CFCFCF #CCC #CFCFCF; 
+	margin: 20px auto 4px auto; 
+	text-align: left;
+	width: 860px; 
+}
+.container {
+	margin: 10px;
+}
+
+/* menu */
+.menu a {
+	background: #EEE;
+	border-right: 1px solid #CECECE;
+	border-top: 1px solid #E5E5E5;
+	color: #888;
+	float: left;
+	padding-top: 10px;
+	width: 150px; height: 28px;
+}
+.menu a span {
+	padding-left: 10px;
+	font: normal 1.6em serif,Times New Roman;
+}
+.menu a:hover {
+	background: #EEE url(img/bgmenu.gif) repeat-x;
+	color: #555;
+}
+.menu a#last {
+	width: 235px;
+	border-right: none;
+}
+
+/* content */
+.content {
+	background: #F5F5F5;
+	border-top: 1px solid #E5E5E5;
+	clear: both;
+}
+.content h1 {
+	margin: 0.5;
+	font: normal 2.0em serif,Times New Roman;
+	color: #666;
+}
+.content p {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 20px 0 5px; 
+	font: 1.6em normal serif,Times New Roman;
+	line-height: 1.8em;
+	color: #777;
+}
+.item {
+	background: #FCFCFC url(img/bgitem.gif) repeat-x;
+	padding: 5px;
+}
+.text {
+	position: relative; top: -120px; left: 260px; width: 540px; height: 25px;
+	color: #777;
+	text-align: left;
+	font: 1.6em serif,Times New Roman;
+	line-height: 1.5em;
+}
+
+
+/* footer */
+.footer {
+	padding: 5px;
+	background: #F5F5F5;
+	color: #666;
+}
+.footer .left, .footer .right {padding: 0 12px;}
+.footer .right, .footer .right a {color: #AAA;}
+.footer .right a:hover {color: #444;}
+
+/* floats */
+.left {float: left;}
+.right {float: right;}
+.clearer {clear: both;}

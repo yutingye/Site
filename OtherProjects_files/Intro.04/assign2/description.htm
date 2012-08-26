@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Image Processing</title>
+</head>
+
+<body>
+
+<p>-- blur 8: I calculated the (2*n+1)*(2*n+1) filter using Gaussian formula, 
+where <font face="Times New Roman">&#963;=1. </font>But it didn't blur much. </p>
+<p>-- sharp (cannot remember the parameter): I extrapolated with the blur image 
+using 2.0 as parameter. But due to the above reason, it doesn't sharpen much.</p>
+<p>-- contrast 2.0</p>
+<p>-- noise 0.5</p>
+<p>-- quantize 2</p>
+<p>-- random Dither, ordered Dither, Floyd Steinberg Dither: They're all quantized to 2 bits.<br> I don't know why my 
+dithering are all brighter than what the sample program generates. I know I'm 
+doing right, but still wondering why they're different.</p>
+<p>-- extract channel 0 </p>
+<p>-- saturation -0.5</p>
+<p>-- crop 450 320 -500 -200:&nbsp; I considered the negative width and height 
+values valid but of opposite direction</p>
+<p>-- edge Detect: I only used a 3*3 filter, so it's not so obvious</p>
+<p>-- fun: cosine, it can be used as reflection of water in animation</p>
+<p>-- rotate 240</p>
+<p>-- scale 0.5 1.5</p>
+<p>-- art:&nbsp; emboss, using bump map+contrast(4)+blur(2)&nbsp; It's quite 
+trivial, but I like the effect:-)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

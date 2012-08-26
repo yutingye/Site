@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Non-Photorealism Rendering</title>
+</head>
+
+<body>
+
+<p><b><font size="6">Non-Photorealism Rendering</font></b></p>
+<p>
+<img border="0" src="T5.JPG" width="408" height="451"><img border="0" src="M3.JPG" width="373" height="281"></p>
+<p>
+<font size="4">* Interaction (except for what have been supplied by the 
+skeleton code)</font><br>
+&nbsp;&nbsp;&nbsp; -&nbsp; 't' and 'T': Toggle texture<br>
+&nbsp;&nbsp;&nbsp; -&nbsp; '+' / '-' : Change the silhouette line width<br>
+&nbsp;&nbsp;&nbsp; -&nbsp; Mouse left key drag : Move the point light around 
+the object</p>
+
+<p><font size="4">* Silhouette</font></p>
+<p>
+&nbsp;&nbsp;&nbsp; I didn't actually detect the silhouette by myself but made 
+OpenGL did it for me... Greg said it's hard to draw open shapes this way, but I 
+don't quite understand. If there are edges that shared by only one triangle, 
+then it's not a silhouette edge by definition. Otherwise, for every edge that 
+shared by 2 triangles, we can test the dot products. Simply render the scene 
+twice, one with front faces filled and another with front faces culled and depth 
+buffer on. Other people also do it by pulling the back faces a bit backward (towards the camera) for 
+better silhouette.<br>
+&nbsp;&nbsp;&nbsp; I did search a lot on how to fast detect silhouette edges. 
+The most common and quite efficient way is to randomly grab a bunch of edges as 
+seeds, and search each neighbor until a silhouette edge is found. Once an edge 
+is found, it's easy to trace this silhouette line. The drawback of this method 
+is, it cannot guarantee to find all the silhouette edges. However, it works very 
+well most of the time because we don't even need the whole silhouette in a 
+non-photorealistic image. For each following frame, we can use the silhouette of 
+the previous frame as the start point because of the frame coherence.&nbsp; <br>
+&nbsp;&nbsp;&nbsp; Nonetheless, I don't think this algorithm is very 
+effective. Given a very huge set of polygons, it would still be a lot of work to 
+find the silhouette edges one by one. Coherence between frames is not always so 
+helpful. (And I don't think the implementation is simple :p) On the other hand, 
+I really don't want to do brute force, check every edges in every frame. (It's 
+not hard but kind of silly...) Since OpenGL can do that nicely and effectively, 
+why not just use? <br>
+&nbsp;&nbsp;&nbsp; One drawback is the lines may not be connective in the 
+joint points, especially when the lines are thick. The pull-backward method I 
+mentioned above can solve this problem and yield identical line width. And of 
+course, I lost flexibility in controlling the silhouette by leaving it to 
+OpenGL. </p>
+<p><font size="4">* Cel-Shading</font></p>
+<p><font size="4">&nbsp;&nbsp; </font>&nbsp;I referred to <span class="title">
+<a href="http://www.gamedev.net/reference/articles/article1438.asp" target="_blank">Cel-Shading</a> 
+(</span><span class="author">by <a href="mailto:disk_disaster@hotmail.com">Sami 
+&quot;MENTAL&quot; Hamlaoui</a>)@ <a href="http://www.gamedev.net" target="_blank">GameDev.net</a> 
+for 
+this part.</span><br>
+<span class="author">&nbsp;&nbsp;&nbsp; The idea is quite simple: assign 3 
+colors to represent bright, light and dark respectively. I didn't directly use 
+the 1D texture as the article suggests (I tried, but it didn't work...). 
+Instead, I have an array as look up table for those 3 colors, and use the 
+intensity (which is (I/ Distance^2) * (N·L) ) as the index.</span><br>
+<span class="author">&nbsp;&nbsp;&nbsp; There are problems with this simple 
+algorithm. First, I didn't do ray casting so I cannot handle the shadow. (See 
+the teapot above, right side should not be lit by should be in shadow.) Second, 
+there are serious aliasing with per vertex shading. The border between two 
+colors is zigzag but not smooth. (It looks fine with the teapot but worse with 
+things like a sphere. I would love to do per pixel shading, but give me a video 
+card first please...)&nbsp; </span></p>
+<p><font size="4">* Texture</font></p>
+
+<p>&nbsp;&nbsp;&nbsp; I was planed to use mipmap (which seems to be suggested by 
+the skeleton code?) but not being success. Now I simply bind the proper texture 
+for every triangle. Still, it doesn't look every pleasing, with some distortion 
+in *thin* triangles and noticeable discrepancy between different textures. Part 
+of the problem may be the texture itself and part of it may be the texture 
+mapping scheme, which is EYE_PLANE in this case.</p>
+
+</body>
+
+</html>

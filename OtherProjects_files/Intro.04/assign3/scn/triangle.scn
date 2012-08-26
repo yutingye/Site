@@ -1,0 +1,9 @@
+film_resolution 640 160
+#camera 0 0 0 0 0.70710678 0.70710678 0 0.70710678 -0.70710678 45
+background 1 1 1
+max_vertices 3
+vertex -1 0 2
+vertex -1 1 2
+vertex 0 0 2
+
+triangle 0 1 2
