@@ -1,6 +1,0 @@
-#This is a sphere lit by an ambient light on a white background.
-#film_resolution 480 480
-#camera 0 0 0 0 0.70710678 0.70710678 0 0.70710678 -0.70710678 45
-sphere 0 0 2 1
-ambient_light 0 0.5 0
-background 1 1 1
