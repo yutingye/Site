@@ -1,0 +1,17 @@
+#This is a sphere lit by a green spot light pointing from right to left.
+#The background is 50% gray.
+film_resolution 640 480
+sphere 0 0 2 1
+spot_light 0 .5 0 1 0 1 0 1 2 45 90
+background .5 .5 .5
+max_vertices 4
+
+vertex 20 -2 -20
+vertex -20 -2 -20
+vertex -20 -2 20
+vertex 20 -2 20
+
+material 0 0 0 1 1 1 0 0 0 5 0 0 0 1
+
+#triangle 0 1 2
+#triangle 0 2 3
