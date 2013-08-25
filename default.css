@@ -95,14 +95,28 @@ body {
 	background: #FCFCFC url(img/bgitem.gif) repeat-x;
 	padding: 5px;
 }
+.item p {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 20px 0 5px; 
+	font: 1.6em normal serif,Times New Roman;
+	line-height: 1.8em;
+	color: #777;
+}
 .text {
-	position: relative; top: -120px; left: 260px; width: 550px; height: 40px;
+	position: relative; top: -120px; left: 260px; width: 550px; height: 45px;
 	color: #777;
 	text-align: left;
 	font: 1.6em serif,Times New Roman;
 	line-height: 1.5em;
 }
-
+.tighttext {
+	position: relative; top: -110px; left: 260px; width: 550px; height: 5px;
+	color: #777;
+	text-align: left;
+	font: 1.6em serif,Times New Roman;
+	line-height: 1.5em;
+}
 
 /* footer */
 .footer {
