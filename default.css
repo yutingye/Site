@@ -87,7 +87,7 @@ body {
 	padding-left: 50px;
 	padding-right: 50px;
 	margin: 20px 0 5px; 
-	font: 1.6em normal serif,"Times New Roman";
+	font: normal 1.6em serif,"Times New Roman";
 	line-height: 1.8em;
 	color: #777;
 }
@@ -99,7 +99,7 @@ body {
 	padding-left: 50px;
 	padding-right: 50px;
 	margin: 20px 0 5px; 
-	font: 1.6em normal serif,"Times New Roman";
+	font: normal 1.6em serif,"Times New Roman";
 	line-height: 1.8em;
 	color: #777;
 }
