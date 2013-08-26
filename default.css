@@ -19,8 +19,8 @@ body {
 	background: #CCC url(img/bg.gif) repeat-y fixed bottom center;
 	color: #333;
 	text-align: center;
-	margin: 20px, 0;
-	font: normal 0.6em serif,Times New Roman;
+	margin: 20px;
+	font: normal 0.6em serif,"Times New Roman";
 }
 .gfx a {
 	background: #F5F5F5 url(img/bright_pixel.gif) no-repeat left center; 
@@ -32,7 +32,7 @@ body {
 .header {
 	background: #FFF;
 	border-bottom: 1px solid #E5E5E5;
-	font: bold 2.6em serif,Times New Roman;
+	font: bold 2.6em serif,"Times New Roman";
 	line-height: 3em;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 .menu a span {
 	padding-left: 10px;
-	font: normal 1.6em serif,Times New Roman;
+	font: normal 1.6em serif,"Times New Roman";
 }
 .menu a:hover {
 	background: #EEE url(img/bgmenu.gif) repeat-x;
@@ -79,15 +79,15 @@ body {
 	clear: both;
 }
 .content h1 {
-	margin: 0.5;
-	font: normal 2.0em serif,Times New Roman;
+	margin: 0.5em;
+	font: normal 2.0em serif,"Times New Roman";
 	color: #666;
 }
 .content p {
 	padding-left: 50px;
 	padding-right: 50px;
 	margin: 20px 0 5px; 
-	font: 1.6em normal serif,Times New Roman;
+	font: 1.6em normal serif,"Times New Roman";
 	line-height: 1.8em;
 	color: #777;
 }
@@ -99,7 +99,7 @@ body {
 	padding-left: 50px;
 	padding-right: 50px;
 	margin: 20px 0 5px; 
-	font: 1.6em normal serif,Times New Roman;
+	font: 1.6em normal serif,"Times New Roman";
 	line-height: 1.8em;
 	color: #777;
 }
@@ -107,14 +107,14 @@ body {
 	position: relative; top: -120px; left: 260px; width: 550px; height: 45px;
 	color: #777;
 	text-align: left;
-	font: 1.6em serif,Times New Roman;
+	font: 1.6em serif,"Times New Roman";
 	line-height: 1.5em;
 }
 .tighttext {
 	position: relative; top: -110px; left: 260px; width: 550px; height: 5px;
 	color: #777;
 	text-align: left;
-	font: 1.6em serif,Times New Roman;
+	font: 1.6em serif,"Times New Roman";
 	line-height: 1.5em;
 }
 
