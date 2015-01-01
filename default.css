@@ -12,8 +12,9 @@ http://templates.arcsin.se/license/
 
 /* standard elements */
 a {
-	color: #333;
+	color: #888;
 	text-decoration: none;
+    font-weight: bold;
 }
 body {
 	background: #CCC url(img/bg.gif) repeat-y fixed bottom center;
