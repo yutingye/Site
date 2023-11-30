@@ -61,9 +61,9 @@
                  
 				<p style="height: 120px;">
 				<a target="_blank" href="https://stanford-tml.github.io/drop/">
-				<img src="Research_files/imageEffectsAbove.png" alt="" style="position: relative; height: 138px; width: 176px; left: -9px; top: 5px; z-index: 1;"/>
-				<img src="Research_files/teaser_Drop.png" alt="teaser image" style="position: relative; height: 120px; width: 160px; left: -182px; top: -5px; z-index: 1;"/>
-				<img src="Research_files/imageEffectsBelow.png" alt="" style="position: relative; height: 138px; width: 176px; left: -353px; top: 5px;"/>
+				<img src="Research_files/imageEffectsAbove.png" alt="" style="position: relative; height: 136px; width: 176px; left: -9px; top: 5px; z-index: 1;"/>
+				<img src="Research_files/teaser_Drop.png" alt="teaser image" style="position: relative; height: 120px; width: 160px; left: -181px; top: -4px; z-index: 1;"/>
+				<img src="Research_files/imageEffectsBelow.png" alt="" style="position: relative; height: 136px; width: 176px; left: -353px; top: 5px;"/>
 				</a>
 				<div class="text">
 					Yifeng Jiang, Jungdam Won, Yuting Ye*, C. Karen Liu*. 2023. <b>DROP: Dynamics Responses from Human Motion Prior and Projective Dynamics</b> <i>SIGGRAPH Asia conference.</i>
@@ -74,15 +74,15 @@
 					<a href="https://youtu.be/tF5WW7qNMLI?si=Qu70PXDWMzDSex3c">Video
 					<img src="Research_files/youtube.png" width="25" height="25" alt="Youtube video" style="vertical-align:top"/></a>
 					]<br style="line-height: 2.0em"/>
-					We endowed generative motion models with dynamic responses to forces and collision by treating them as one of the energy terms in projective dynamics simulation.
+					We endowed generative motion models with dynamic responses to forces and collision by treating motion prior as one of the energy terms in a projective dynamics simulation.
 				</div>
 				</p>
 
 				<p style="height: 100px;">
 				<a target="_blank" href="https://dk-jang.github.io/MOCHA_SIGASIA2023/">
-				<img src="Research_files/imageEffectsAbove.png" alt="" style="position: relative; height: 120px; width: 176px; left: -9px; top: -12px; z-index: 1;"/>
-				<img src="Research_files/teaser_Mocha.png" alt="teaser image" style="position: relative; height: 105px; width: 160px; left: -182px; top: -20px; z-index: 1;"/>
-				<img src="Research_files/imageEffectsBelow.png" alt="" style="position: relative; height: 120px; width: 176px; left: -353px; top: -12px;"/>
+				<img src="Research_files/imageEffectsAbove.png" alt="" style="position: relative; height: 120px; width: 176px; left: -9px; top: -6px; z-index: 1;"/>
+				<img src="Research_files/teaser_Mocha.png" alt="teaser image" style="position: relative; height: 105px; width: 160px; left: -182px; top: -14px; z-index: 1;"/>
+				<img src="Research_files/imageEffectsBelow.png" alt="" style="position: relative; height: 120px; width: 176px; left: -353px; top: -6px;"/>
 				</a>
 				<div class="text">
 					Deok-Kyeong Jang, Yuting Ye*, Jungdam Won, Sung-Hee Lee*. 2023. <b>MOCHA: Real-Time Motion Characterization via Context Matching</b> <i>SIGGRAPH Asia conference.</i>
@@ -93,7 +93,7 @@
 					<a href="https://youtu.be/2nnEAwHMZNI?si=p0KjVrzdY9JnJbh1">Video
 					<img src="Research_files/youtube.png" width="25" height="25" alt="Youtube video" style="vertical-align:top"/></a>
 					]<br style="line-height: 2.0em"/>
-					Our system maps an input motion to stylized character motions in real time by learning a style-agnostic context space where we can run motion matching to find similar poses between input motions of different styles.
+					We learned a style-agnostic context space with self-supervision for motion style transfer. In real time, we project the encoded input motion to the closest context latent, decode the context latent to a target style, then apply style transfer between input and target.
 				</div>
 				</p>
     				
@@ -112,23 +112,26 @@
 					<a href="https://youtu.be/NKlHUY2Wn14?si=jcHZJosI7GgVYsEA">Video
 					<img src="Research_files/youtube.png" width="25" height="25" alt="Youtube video" style="vertical-align:top"/></a>
 					]<br style="line-height: 2.0em"/>
-					We presented a human motion prior model utilizing learned phase features, which improve pose estimation under occlusion or noise by progressing the motion in time.
+					We presented a human motion prior model utilizing learned phase features. Progressing phases monotonically generates plausible poses under severe occlusion or noise.
 				</div>
 				</p>
     				
-				<!-- style="height: 100px;">
+				<p style="height: 100px;">
 				<a target="_blank" href="https://dl.acm.org/toc/pacmcgit/2023/6/3">
-				<img src="Research_files/imageEffectsAbove.png" alt="" style="position: relative; height: 138px; width: 105px; left: 40px; top: -10px; z-index: 1;"/>
-				<img src="Research_files/teaser_CGIT.png" alt="teaser image" style="position: relative; height: 120px; width: 95px; left: -62px; top: -20px; z-index: 1;"/>
-				<img src="Research_files/imageEffectsBelow.png" alt="" style="position: relative; height: 138px; width: 105px; left: -165px; top: -10px;"/>
+				<img src="Research_files/imageEffectsAbove.png" alt="" style="position: relative; height: 136px; width: 105px; left: 30px; top: -10px; z-index: 1;"/>
+				<img src="Research_files/teaser_CGIT.png" alt="teaser image" style="position: relative; height: 120px; width: 95px; left: -74px; top: -19px; z-index: 1;"/>
+				<img src="Research_files/imageEffectsBelow.png" alt="" style="position: relative; height: 136px; width: 105px; left: -178px; top: -10px;"/>
 				</a>
 				<div class="text">
 					Huamin Wang, Yuting Ye, Victor Zordan. 2023. <b>Proceedings of the ACM on Computer Graphics and Interactive Techniques (PACMCGIT)</b>, <i>Vol. 6, issue 3.</i>
 					<br/> [
-					<a target="_blank" href="https://dl.acm.org/toc/pacmcgit/2023/6/3">Proceedings</a>
+					<a target="_blank" href="https://dl.acm.org/toc/pacmcgit/2023/6/3">Proceedings
+					<img src="Research_files/dlauthorizer.jpg" width="25" height="25" alt="ACM Digital Library" style="vertical-align:top"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a target="_blank" href="https://computeranimation.org/">SCA 2023</a>
 					] <br style="line-height: 2.0em"/>
+					All twenty-one technical papers from SCA 2023 are accepted to CGIT. They reflected state of the art in character animation and physics-based simulation, covering a wide range of topics such as agile and realistic characters and a full head of tightly coiled hair.
 				</div>
-				</p -->
+				</p>
         
 				<p style="height: 100px;">
 				<a target="_blank" href="https://www.cs.ubc.ca/~dreda/retargeting.html">
@@ -205,6 +208,25 @@
 						<a href="https://dl.acm.org/doi/pdf/10.1145/3578575?cid=81335499985"><img src="Research_files/dlauthorizer.jpg" width="25" height="25" alt="ACM Digital Library" style="vertical-align:top"/></a>
 					]<br style="line-height: 2.0em"/>
 					We studied how artifacts in detailed hand motions affect the communication for a virtual character using the game of Charades, both in 2D videos and in VR.
+				</div>
+				</p>
+
+                <p style="height: 100px;">
+				<a target="_blank" href="https://alteredavatar.github.io/">
+				<img src="Research_files/imageEffectsAbove.png" alt="" style="position: relative; height: 136px; width: 162px; left: -4px; top: -10px; z-index: 1;"/>
+				<img src="Research_files/teaser_avatar.jpg" alt="teaser image" style="position: relative; height: 120px; width: 150px; left: -165px; top: -19px; z-index: 1;"/>
+				<img src="Research_files/imageEffectsBelow.png" alt="" style="position: relative; height: 136px; width: 162px; left: -324px; top: -10px;"/>
+				</a>
+				<div class="text">
+					Thu Nguyen-Phuoc, Gabriel Schwartz, Yuting Ye, Stephen Lombardi, Lei Xiao. 2023. <b>AlteredAvatar: Stylizing Dynamic 3D Avatars with Fast Style Adaptation.</b> <i>Arxiv</i>
+					<br/>[
+					<a target="_blank" href="https://alteredavatar.github.io/">Project</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://arxiv.org/pdf/2305.19245.pdf">Paper&nbsp;&nbsp;
+						<img src="Research_files/arxiv.png" width="25" height="25" alt="Arxiv" style="vertical-align:top"/></a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://alteredavatar.github.io/assets/videos/AA_Main_1080_lowRes.mp4">Video
+					    <img src="Research_files/movie.png" width="25" height="25" style="vertical-align:top"/></a>
+					]<br style="line-height: 2.0em"/>
+					We devised a meta-learning algorithm to quickly adapt a dynamic 3D avatar (Instant Codec Avatar) to novel styles prompted by text, an example image, or both. Our reuslts preserve the subject identity across different expressions and views.
 				</div>
 				</p>
 
